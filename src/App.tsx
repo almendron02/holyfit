@@ -198,8 +198,8 @@ export default function App() {
         transition={{ duration: 0.3, ease: 'easeInOut' }}
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           lastScrollY > 20 
-            ? 'bg-white/80 backdrop-blur-md border-b border-gray-100/50 shadow-sm py-4 px-6 md:px-12 lg:px-24' 
-            : 'bg-transparent py-6 px-6 md:px-12 lg:px-24'
+            ? 'bg-white/80 backdrop-blur-md border-b border-gray-100/50 shadow-sm py-2.5 md:py-4 px-4 md:px-12 lg:px-24' 
+            : 'bg-transparent py-3.5 md:py-6 px-4 md:px-12 lg:px-24'
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -212,7 +212,7 @@ export default function App() {
             <img 
               src={logoImg} 
               alt="holy logo" 
-              className="h-14 md:h-16 w-auto object-contain select-none" 
+              className="h-11 md:h-16 w-auto object-contain select-none" 
               referrerPolicy="no-referrer"
             />
           </div>
@@ -254,7 +254,7 @@ export default function App() {
             <img 
               src={logoImg} 
               alt="holy logo" 
-              className="h-14 object-contain brightness-0 invert" 
+              className="h-11 object-contain brightness-0 invert" 
               referrerPolicy="no-referrer"
             />
             <button 
@@ -293,7 +293,7 @@ export default function App() {
           <section 
             id="inicio" 
             ref={heroRef}
-            className="relative w-full min-h-[580px] sm:min-h-[720px] lg:h-[750px] xl:h-[810px] bg-[#E6F5CC] overflow-hidden flex flex-col justify-between lg:flex-row lg:items-end lg:justify-start px-6 md:px-12 lg:px-24 pt-20 md:pt-24 pb-0"
+            className="relative w-full min-h-[580px] sm:min-h-[720px] lg:h-[750px] xl:h-[810px] bg-[#E6F5CC] overflow-hidden flex flex-col justify-between lg:flex-row lg:items-end lg:justify-start px-6 md:px-12 lg:px-24 pt-16 md:pt-24 pb-0"
           >
         {/* Left Side: Chef Image */}
         <div className="w-full lg:w-[42%] xl:w-[40%] flex items-end justify-center lg:justify-start self-end shrink-0 z-10 overflow-hidden order-2 lg:order-1">
@@ -307,7 +307,7 @@ export default function App() {
         </div>
 
         {/* Right Side: Text & CTA */}
-        <div className="w-full lg:w-[58%] xl:w-[60%] h-full flex flex-col justify-center pb-8 lg:pb-16 pt-20 lg:pt-12 pl-0 lg:pl-12 xl:pl-20 z-20 text-left order-1 lg:order-2">
+        <div className="w-full lg:w-[58%] xl:w-[60%] h-full flex flex-col justify-center pb-8 lg:pb-16 pt-16 lg:pt-12 pl-0 lg:pl-12 xl:pl-20 z-20 text-left order-1 lg:order-2">
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -367,22 +367,22 @@ export default function App() {
           </div>
 
           {/* Three columns */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-20 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 text-center">
             {/* Step 1 */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col items-center"
+              className="bg-[#F7F7F7] rounded-[2rem] p-6 md:p-8 border border-gray-100/80 flex flex-col items-center hover:scale-[1.02] transition duration-200 shadow-[0_4px_24px_rgba(0,0,0,0.01)]"
             >
-              <span className="text-[#007A3D] text-[60px] md:text-[100px] lg:text-[120px] font-black leading-none mb-2 md:mb-4 tracking-tighter select-none">
+              <span className="text-[#007A3D] text-[54px] md:text-[80px] lg:text-[100px] font-black leading-none mb-2 md:mb-4 tracking-tighter select-none">
                 01
               </span>
-              <h3 className="text-xl md:text-2xl lg:text-[30px] font-black text-[#17181D] mb-2 md:mb-4 tracking-tight">
+              <h3 className="text-lg md:text-xl lg:text-[24px] font-black text-[#17181D] mb-2 md:mb-4 tracking-tight">
                 Elige tu plan
               </h3>
-              <p className="text-sm md:text-lg lg:text-[21px] text-gray-600 leading-relaxed max-w-[320px]">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed max-w-[280px]">
                 Selecciona el plan que mejor se adapte a tus objetivos y estilo de vida.
               </p>
             </motion.div>
@@ -393,15 +393,15 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col items-center"
+              className="bg-[#F7F7F7] rounded-[2rem] p-6 md:p-8 border border-gray-100/80 flex flex-col items-center hover:scale-[1.02] transition duration-200 shadow-[0_4px_24px_rgba(0,0,0,0.01)]"
             >
-              <span className="text-[#007A3D] text-[60px] md:text-[100px] lg:text-[120px] font-black leading-none mb-2 md:mb-4 tracking-tighter select-none">
+              <span className="text-[#007A3D] text-[54px] md:text-[80px] lg:text-[100px] font-black leading-none mb-2 md:mb-4 tracking-tighter select-none">
                 02
               </span>
-              <h3 className="text-xl md:text-2xl lg:text-[30px] font-black text-[#17181D] mb-2 md:mb-4 tracking-tight">
+              <h3 className="text-lg md:text-xl lg:text-[24px] font-black text-[#17181D] mb-2 md:mb-4 tracking-tight">
                 Cocina nuestra
               </h3>
-              <p className="text-sm md:text-lg lg:text-[21px] text-gray-600 leading-relaxed max-w-[320px]">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed max-w-[280px]">
                 Nuestro equipo prepara tus comidas con la mejor calidad y frescura.
               </p>
             </motion.div>
@@ -412,15 +412,15 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col items-center"
+              className="bg-[#F7F7F7] rounded-[2rem] p-6 md:p-8 border border-gray-100/80 flex flex-col items-center hover:scale-[1.02] transition duration-200 shadow-[0_4px_24px_rgba(0,0,0,0.01)]"
             >
-              <span className="text-[#007A3D] text-[60px] md:text-[100px] lg:text-[120px] font-black leading-none mb-2 md:mb-4 tracking-tighter select-none">
+              <span className="text-[#007A3D] text-[54px] md:text-[80px] lg:text-[100px] font-black leading-none mb-2 md:mb-4 tracking-tighter select-none">
                 03
               </span>
-              <h3 className="text-xl md:text-2xl lg:text-[30px] font-black text-[#17181D] mb-2 md:mb-4 tracking-tight">
+              <h3 className="text-lg md:text-xl lg:text-[24px] font-black text-[#17181D] mb-2 md:mb-4 tracking-tight">
                 Disfruta
               </h3>
-              <p className="text-sm md:text-lg lg:text-[21px] text-gray-600 leading-relaxed max-w-[320px]">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed max-w-[280px]">
                 Recibe tus comidas listas para disfrutar en tu hogar sin esfuerzo.
               </p>
             </motion.div>
@@ -590,21 +590,17 @@ export default function App() {
                 </motion.p>
               </div>
 
-              {/* Selection Options - Carousel format on mobile, grid on desktop */}
-              {/* Carousel Swipe Indicator for Mobile */}
-              <div className="lg:hidden text-center text-xs font-semibold text-gray-400 mb-4 animate-pulse">
-                Desliza horizontalmente para seleccionar: Proteína, Acompañamiento y Vegetal ↔
-              </div>
-              <div className="flex lg:grid lg:grid-cols-3 gap-6 lg:gap-8 mb-12 overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory scrollbar-none pb-4 lg:pb-0 scroll-smooth px-1">
+              {/* Selection Options - Beautifully stacked on mobile, side-by-side on desktop */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
                 {/* Protein Selection */}
-                <div className="min-w-[88%] sm:min-w-[70%] lg:min-w-0 snap-center shrink-0 space-y-4 bg-white/50 lg:bg-transparent p-4 lg:p-0 rounded-3xl border border-gray-100 lg:border-none">
+                <div className="w-full space-y-4 bg-white p-6 rounded-3xl border border-gray-200/60 shadow-[0_4px_24px_rgba(0,0,0,0.01)] hover:border-gray-300 transition duration-200">
                   <span className="block font-bold text-lg text-gray-700">1. Proteína Principal</span>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {['Pollo a la Plancha', 'Salmón Fresco', 'Res Premium', 'Tofu Orgánico'].map((opt) => (
                       <button
                         key={opt}
                         onClick={() => setProtein(opt)}
-                        className={`py-3.5 px-4 rounded-2xl border-2 text-xs md:text-sm font-bold transition-all ${
+                        className={`py-3 px-4 rounded-2xl border-2 text-xs md:text-sm font-bold transition-all ${
                           protein === opt 
                             ? 'bg-[#007A3D] text-white border-[#007A3D] shadow-md scale-[1.01]' 
                             : 'bg-white text-gray-700 border-gray-200/80 hover:border-gray-300'
@@ -617,14 +613,14 @@ export default function App() {
                 </div>
 
                 {/* Carbohydrate Selection */}
-                <div className="min-w-[88%] sm:min-w-[70%] lg:min-w-0 snap-center shrink-0 space-y-4 bg-white/50 lg:bg-transparent p-4 lg:p-0 rounded-3xl border border-gray-100 lg:border-none">
+                <div className="w-full space-y-4 bg-white p-6 rounded-3xl border border-gray-200/60 shadow-[0_4px_24px_rgba(0,0,0,0.01)] hover:border-gray-300 transition duration-200">
                   <span className="block font-bold text-lg text-gray-700">2. Acompañamiento</span>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {['Quinoa con Hierbas', 'Arroz Integral', 'Camote Asado', 'Arroz de Coliflor'].map((opt) => (
                       <button
                         key={opt}
                         onClick={() => setCarb(opt)}
-                        className={`py-3.5 px-4 rounded-2xl border-2 text-xs md:text-sm font-bold transition-all ${
+                        className={`py-3 px-4 rounded-2xl border-2 text-xs md:text-sm font-bold transition-all ${
                           carb === opt 
                             ? 'bg-[#007A3D] text-white border-[#007A3D] shadow-md scale-[1.01]' 
                             : 'bg-white text-gray-700 border-gray-200/80 hover:border-gray-300'
@@ -637,14 +633,14 @@ export default function App() {
                 </div>
 
                 {/* Vegetable Selection */}
-                <div className="min-w-[88%] sm:min-w-[70%] lg:min-w-0 snap-center shrink-0 space-y-4 bg-white/50 lg:bg-transparent p-4 lg:p-0 rounded-3xl border border-gray-100 lg:border-none">
+                <div className="w-full space-y-4 bg-white p-6 rounded-3xl border border-gray-200/60 shadow-[0_4px_24px_rgba(0,0,0,0.01)] hover:border-gray-300 transition duration-200">
                   <span className="block font-bold text-lg text-gray-700">3. Vegetal Adicional</span>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {['Brócoli al Vapor', 'Espárragos Asados', 'Vegetales Mixtos', 'Espinacas al Ajillo'].map((opt) => (
                       <button
                         key={opt}
                         onClick={() => setVeggie(opt)}
-                        className={`py-3.5 px-4 rounded-2xl border-2 text-xs md:text-sm font-bold transition-all ${
+                        className={`py-3 px-4 rounded-2xl border-2 text-xs md:text-sm font-bold transition-all ${
                           veggie === opt 
                             ? 'bg-[#007A3D] text-white border-[#007A3D] shadow-md scale-[1.01]' 
                             : 'bg-white text-gray-700 border-gray-200/80 hover:border-gray-300'
@@ -872,7 +868,7 @@ export default function App() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="pt-32 pb-24 md:pb-36"
+          className="pt-24 md:pt-32 pb-24 md:pb-36"
         >
           {/* Subpage Header Banner */}
           <div className="bg-[#E6F5CC] py-16 md:py-24 px-6 text-center select-none mb-16 md:mb-24">
@@ -1021,7 +1017,7 @@ export default function App() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="pt-32 pb-24 md:pb-36"
+          className="pt-24 md:pt-32 pb-24 md:pb-36"
         >
           {/* Subpage Header Banner */}
           <div className="bg-[#E6F5CC] py-16 md:py-24 px-6 text-center select-none mb-12 md:mb-16">
